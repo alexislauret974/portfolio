@@ -1,0 +1,163 @@
+/* /*    Framework  : BFMW
+*/
+/*******************************************
+Global
+********************************************/
+body:not(.bfmw_no_style) {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #29363f;
+    color : white;
+}
+
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #53ff53;
+    -webkit-transition: 0.3s ;
+    -moz-transition: 0.3s ;
+    -ms-transition: 0.3s ;
+    -o-transition: 0.3s ;
+    transition: 0.3s ;
+}
+
+.vert {
+    color: #53ff53;
+}
+
+.bleu {
+    color : #a3a3ff;
+}
+
+.rouge {
+    color : #ff9999;
+}
+
+.noir {
+    color : #000000;
+}
+
+.jaune {
+    color : #999900;
+}
+
+.jaune_force {
+    color : #999900 !important;
+}
+
+.vert_doux {
+    color: #539953;
+}
+
+.blanc {
+    color: #FFFFFF;
+}
+
+
+
+.font_small {
+    font-size: small;
+}
+
+.font_large {
+    font-size: large;
+}
+
+.font_medium {
+    font-size: medium;
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.width_100 {
+    width: 100% !important;
+}
+
+.text_align_left {
+    text-align: left !important;
+}
+
+.text_align_center {
+    text-align: center !important;
+}
+
+.text_align_right {
+    text-align: right !important;
+}
+
+.text_align_justify {
+    text-align: justify !important;
+}
+
+.text_vertical_middle {
+    vertical-align: middle !important;
+}
+
+.text_vertical_bottom {
+    vertical-align: bottom !important;
+}
+
+.text_vertical_top {
+    vertical-align: top !important;
+}
+
+.bfmw_noscript {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black url("../images/odin.png") no-repeat top;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    color: red;
+    text-align: center;
+    margin-top: 0;
+}
+
+.no_wrap {
+    white-space: nowrap;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+.hide {
+    display: none;
+}
+
+.force_hide {
+    display: none !important;
+}
+
+.bfmw_align_center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.CheckBoxList {
+    border:2px solid #ccc;
+    background-color: white;
+    color: black;
+    overflow-y: scroll;
+    display: inline-block;
+}
+
+.monter:before {
+    content: '\25B2';
+    white-space: nowrap;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+.descendre:before {
+    content: '\25BC';
+    white-space: nowrap;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}

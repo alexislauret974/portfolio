@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://odin.iut.uca.fr/etudiants/?p=notes -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="./odin.iut.uca.fr_files/global.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/main.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/master.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/detail.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/mdresponsive.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/menu.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/alert.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/tooltip.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/table.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/treeview.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/update_box.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/resultat.css" rel="stylesheet" type="text/css">
+		<link href="./odin.iut.uca.fr_files/print.css" rel="stylesheet" type="text/css" media="print">
+        <link href="./odin.iut.uca.fr_files/style.css" rel="stylesheet" type="text/css">
+        <link href="./odin.iut.uca.fr_files/specific_notes.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="https://odin.iut.uca.fr/etudiants/images/favicon.ico" type="image/x-icon">
+        <script src="./odin.iut.uca.fr_files/bfmw.js.téléchargement" type="text/javascript" mc_processed="1"></script>
+        <script src="./odin.iut.uca.fr_files/main.js.téléchargement" type="text/javascript" mc_processed="1"></script>
+        <script src="./odin.iut.uca.fr_files/specific_notes.js.téléchargement" type="text/javascript" mc_processed="1"></script>
+    </head>
+    <body>
+    <noscript>
+        <h2 class="bfmw_noscript">Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.<br/><a href="https://www.enable-javascript.com/fr/" target="_blank">Cliquez-ici</a> pour voir les instructions pour activer JavaScript dans votre navigateur Web.</h2>
+    </noscript>
+        <div id="tooold" data-bfmw="tooold"></div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header" id="modal_header">
+                    <span class="close">×</span>
+                    <h2 id="modal_title"></h2>
+                </div>
+                <div class="modal-body" id="modal_content"></div>
+            </div>
+        </div>
+    <div id="bfmw_updater_simple" class="bfmw_updater_simple hide">
+        <p class="bfmw_updater_p">
+            <label for="bfmw_update_field_text" id="bfmw_update_field_label"></label>
+            <input type="text" value="" data-bfmw="" data-bfmw2="" data-bfmw3="" id="bfmw_update_field_text">
+            <textarea id="bfmw_update_field_textarea" class="force_hide" value="" data-bfmw="" data-bfmw2="" data-bfmw3=""></textarea><br>
+            <input type="submit" value="Valider" id="bfmw_update_submit">
+        </p>
+    </div><div class="top_page">
+    <div class="menu" id="GeneralMenu">
+        <a href="https://odin.iut.uca.fr/" title="Retour au portail" class="not_menu retour_portail_menu"><img class="retour_portail" src="./odin.iut.uca.fr_files/home.png"></a>
+        <a href="https://odin.iut.uca.fr/etudiants/?" class="not_menu">Accès étudiant</a>
+        <a href="https://odin.iut.uca.fr/etudiants/?p=accueil">Renseignements</a>
+                <a href="https://odin.iut.uca.fr/etudiants/?p=notes" class="active">Notes</a>
+                <a href="https://odin.iut.uca.fr/etudiants/?p=absences">Absences</a>
+                <a href="https://odin.iut.uca.fr/etudiants/?p=edt">Emploi du temps</a>
+                <a href="https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29" target="aide_odin">Aide</a>
+        <a href="https://odin.iut.uca.fr/etudiants/?p=logout">Se déconnecter</a>
+        <a href="https://odin.iut.uca.fr/etudiants/?p=notes#" class="icon texte_menu"><img src="./odin.iut.uca.fr_files/menu.png" class="image_menu" alt="Menu"></a>
+    </div>
+</div>
+<div id="id_margin_top"></div><div class="main">
+        Choisissez l'année à afficher : <select data-bfmw="203" class="specific_select_accueil_1" id="id_selecteur_annee">
+        <option value="7">2022-2023</option>
+        <option value="8" selected="">2023-2024</option>
+    </select><br>
+    Choisissez le semestre à afficher : <select class="specific_select_accueil_1" data-bfmw="8" id="id_selecteur_semestre">
+        <option value="203">Semestre 1 </option>
+    </select><br>
+    <br><br>
+    <span>Les notes affichées ci-dessous sont provisoires et peuvent être amenées à changer.</span><br>
+    <span> Seul le jury de semestre est habilité à les confirmer.</span><br>
+        <table class="releve">
+        <tbody><tr>
+            <td colspan="5" class="text_align_right">LAURET Alexis</td>
+            <th class="vert text_align_center">-</th>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+        </tr>
+        <tr>
+            <th colspan="4" class="text_align_left">Semestre 1 </th>
+            <th class="text_align_center">Coeff</th>
+            <th class="text_align_center">Note</th>
+            <th class="text_align_center">Moy</th>
+            <th class="text_align_center">Maxi</th>
+            <th class="text_align_center">Mini</th>
+        </tr>
+                <tr>
+            <td colspan="4" class="bleu">UE 1.1 - Assister l'administrateur du réseau</td>
+            <td class="text_align_center">12.00</td>
+            <td class="text_align_center">-</td>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R101 : Initiation aux réseaux informatiques</td>
+                        <td class="text_align_center">12.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center">11.89</th>
+            <th class="text_align_center">19.52</th>
+            <th class="text_align_center">3.4</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R101 :Init_rés1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center">11.89</th>
+            <th class="text_align_center">19.52</th>
+            <th class="text_align_center">3.4</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R102 : Principes et architecture des réseaux</td>
+                        <td class="text_align_center">12.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R102 :Archi_rés1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R103 : Réseaux locaux et équipements actifs</td>
+                        <td class="text_align_center">8.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R103 :RLAN1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R104 : Fondamentaux des systèmes électroniques</td>
+                        <td class="text_align_center">8.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R104 :Elec1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R106 : Architecture des systèmes numériques et informatiques</td>
+                        <td class="text_align_center">10.00</td>
+            <td class="vert text_align_center">11</td>
+            <th class="text_align_center">10.32</th>
+            <th class="text_align_center">20</th>
+            <th class="text_align_center">3.5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R106 :Archi_Sys1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">11</td>
+            <th class="text_align_center">10.32</th>
+            <th class="text_align_center">20</th>
+            <th class="text_align_center">3.5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Contrôle théorique&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>11.00</b></td>
+            <th class="text_align_center">10.32</th>
+            <th class="text_align_center">20.00</th>
+            <th class="text_align_center">3.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R108 : Bases des systèmes d'exploitation</td>
+                        <td class="text_align_center">6.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R108:Système1 &nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>QCM1&nbsp;(sur&nbsp;12.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>7.50</b></td>
+            <th class="text_align_center">5.47</th>
+            <th class="text_align_center">9.50</th>
+            <th class="text_align_center">0.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>QCM2&nbsp;(sur&nbsp;10.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>4.50</b></td>
+            <th class="text_align_center">5.83</th>
+            <th class="text_align_center">9.50</th>
+            <th class="text_align_center">0.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Examen 1h&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>15.75</b></td>
+            <th class="text_align_center">11.02</th>
+            <th class="text_align_center">18.50</th>
+            <th class="text_align_center">1.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R110 : Anglais de communication et initiation au vocabulaire technique</td>
+                        <td class="text_align_center">3.00</td>
+            <td class="vert text_align_center">12.33</td>
+            <th class="text_align_center">10.66</th>
+            <th class="text_align_center">17.33</th>
+            <th class="text_align_center">3.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R110 :Anglais1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">12.33</td>
+            <th class="text_align_center">10.66</th>
+            <th class="text_align_center">17.33</th>
+            <th class="text_align_center">3.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation TDN°1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>7.00</b></td>
+            <th class="text_align_center">9.33</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">2.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>evaluation TD N°2&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">10.81</th>
+            <th class="text_align_center">18.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Presentation TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>16.00</b></td>
+            <th class="text_align_center">15.18</th>
+            <th class="text_align_center">16.00</th>
+            <th class="text_align_center">14.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R111 : Expression-Culture-Communication Professionnelles 1</td>
+                        <td class="text_align_center">3.00</td>
+            <td class="vert text_align_center">12.3</td>
+            <th class="text_align_center">9.64</th>
+            <th class="text_align_center">15</th>
+            <th class="text_align_center">4.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R111 :Com1&nbsp;</td>
+                        <td class="text_align_center">1.50</td>
+            <td class="vert text_align_center">12.3</td>
+            <th class="text_align_center">9.64</th>
+            <th class="text_align_center">15</th>
+            <th class="text_align_center">4.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>DS1 TDA&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">2.00</td>
+            <td class="rouge text_align_center"><b>10.00</b></td>
+            <th class="text_align_center">8.59</th>
+            <th class="text_align_center">16.00</th>
+            <th class="text_align_center">5.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Oral TDA&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">9.70</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>TPDS1 TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>12.00</b></td>
+            <th class="text_align_center">10.50</th>
+            <th class="text_align_center">15.50</th>
+            <th class="text_align_center">7.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>TP DS2 TP1 TP2&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>15.50</b></td>
+            <th class="text_align_center">11.70</th>
+            <th class="text_align_center">15.50</th>
+            <th class="text_align_center">9.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R112 : Projet Personnel et Professionnel</td>
+                        <td class="text_align_center">2.00</td>
+            <td class="vert text_align_center">14</td>
+            <th class="text_align_center">10.82</th>
+            <th class="text_align_center">18</th>
+            <th class="text_align_center">5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R112 :PPP1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">14</td>
+            <th class="text_align_center">10.82</th>
+            <th class="text_align_center">18</th>
+            <th class="text_align_center">5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>DS TDA PPP 1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">9.85</th>
+            <th class="text_align_center">15.00</th>
+            <th class="text_align_center">5.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R113 : Mathématiques du signal</td>
+                        <td class="text_align_center">5.00</td>
+            <td class="vert text_align_center">10.3</td>
+            <th class="text_align_center">10.12</th>
+            <th class="text_align_center">19.05</th>
+            <th class="text_align_center">2.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R113 :Math_signal1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">10.3</td>
+            <th class="text_align_center">10.12</th>
+            <th class="text_align_center">19.05</th>
+            <th class="text_align_center">2.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation 1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>9.00</b></td>
+            <th class="text_align_center">9.97</th>
+            <th class="text_align_center">19.00</th>
+            <th class="text_align_center">2.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Moyenne_Maths1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>11.60</b></td>
+            <th class="text_align_center">10.50</th>
+            <th class="text_align_center">19.60</th>
+            <th class="text_align_center">2.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R114 : Mathématiques des transmissions</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center">10.4</th>
+            <th class="text_align_center">19</th>
+            <th class="text_align_center">6</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R114 :Math_trans1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center">10.4</th>
+            <th class="text_align_center">19</th>
+            <th class="text_align_center">6</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE101 : Se sensibiliser à l'hygiène informatique et à la cybersécurité</td>
+                        <td class="text_align_center">16.00</td>
+            <td class="vert text_align_center">13</td>
+            <th class="text_align_center">11.58</th>
+            <th class="text_align_center">17</th>
+            <th class="text_align_center">7</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">SAE11 &nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">13</td>
+            <th class="text_align_center">11.58</th>
+            <th class="text_align_center">17</th>
+            <th class="text_align_center">7</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Diaporama TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>13.00</b></td>
+            <th class="text_align_center">12.25</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">9.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Eval. écrite lors du TP&nbsp;(sur&nbsp;10.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>6.00</b></td>
+            <th class="text_align_center">5.90</th>
+            <th class="text_align_center">9.50</th>
+            <th class="text_align_center">0.75</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Rapport&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">13.50</th>
+            <th class="text_align_center">18.00</th>
+            <th class="text_align_center">8.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE102 : S'initier aux réseaux informatiques</td>
+                        <td class="text_align_center">33.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">SAE12 &nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE106</td>
+                        <td class="text_align_center">0.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td colspan="10"></td>
+        </tr>
+                <tr>
+            <td colspan="4" class="bleu">UE 1.2 - Découvrir les transmissions et la ToIP</td>
+            <td class="text_align_center">10.00</td>
+            <td class="text_align_center">-</td>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R101 : Initiation aux réseaux informatiques</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R101 :Init_Rés1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R103 : Réseaux locaux et équipements actifs</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R103 :RLAN1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R104 : Fondamentaux des systèmes électroniques</td>
+                        <td class="text_align_center">5.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R104 :Elec1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R105 : Supports de transmission pour les réseaux locaux</td>
+                        <td class="text_align_center">7.00</td>
+            <td class="vert text_align_center">16</td>
+            <th class="text_align_center">11.27</th>
+            <th class="text_align_center">20</th>
+            <th class="text_align_center">2</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R105 :Telecoms1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">16</td>
+            <th class="text_align_center">11.27</th>
+            <th class="text_align_center">20</th>
+            <th class="text_align_center">2</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>T1-E1-Exam n°1 du 13 oct 23&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>16.00</b></td>
+            <th class="text_align_center">11.27</th>
+            <th class="text_align_center">20.00</th>
+            <th class="text_align_center">2.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R110 : anglais de communication et initiation au vocabulaire technique</td>
+                        <td class="text_align_center">5.00</td>
+            <td class="vert text_align_center">12.33</td>
+            <th class="text_align_center">10.66</th>
+            <th class="text_align_center">17.33</th>
+            <th class="text_align_center">3.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R110 :Anglais 1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">12.33</td>
+            <th class="text_align_center">10.66</th>
+            <th class="text_align_center">17.33</th>
+            <th class="text_align_center">3.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation TDN°1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>7.00</b></td>
+            <th class="text_align_center">9.33</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">2.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>evaluation TD N°2&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">10.81</th>
+            <th class="text_align_center">18.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Presentation TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>16.00</b></td>
+            <th class="text_align_center">15.18</th>
+            <th class="text_align_center">16.00</th>
+            <th class="text_align_center">14.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R111 : Expression-Culture-Communication Professionnelles 1</td>
+                        <td class="text_align_center">5.00</td>
+            <td class="vert text_align_center">12.3</td>
+            <th class="text_align_center">9.64</th>
+            <th class="text_align_center">15</th>
+            <th class="text_align_center">4.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R111 :Com1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">12.3</td>
+            <th class="text_align_center">9.64</th>
+            <th class="text_align_center">15</th>
+            <th class="text_align_center">4.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>DS1 TDA&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">2.00</td>
+            <td class="rouge text_align_center"><b>10.00</b></td>
+            <th class="text_align_center">8.59</th>
+            <th class="text_align_center">16.00</th>
+            <th class="text_align_center">5.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Oral TDA&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">9.70</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>TPDS1 TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>12.00</b></td>
+            <th class="text_align_center">10.50</th>
+            <th class="text_align_center">15.50</th>
+            <th class="text_align_center">7.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>TP DS2 TP1 TP2&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>15.50</b></td>
+            <th class="text_align_center">11.70</th>
+            <th class="text_align_center">15.50</th>
+            <th class="text_align_center">9.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R112 : Projet Personnel et Professionnel</td>
+                        <td class="text_align_center">3.00</td>
+            <td class="vert text_align_center">14</td>
+            <th class="text_align_center">10.82</th>
+            <th class="text_align_center">18</th>
+            <th class="text_align_center">5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R112 :PPP1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">14</td>
+            <th class="text_align_center">10.82</th>
+            <th class="text_align_center">18</th>
+            <th class="text_align_center">5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>DS TDA PPP 1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">9.85</th>
+            <th class="text_align_center">15.00</th>
+            <th class="text_align_center">5.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R113 : Mathématiques du signal</td>
+                        <td class="text_align_center">8.00</td>
+            <td class="vert text_align_center">10.3</td>
+            <th class="text_align_center">10.12</th>
+            <th class="text_align_center">19.05</th>
+            <th class="text_align_center">2.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R113 :Math_signal1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">10.3</td>
+            <th class="text_align_center">10.12</th>
+            <th class="text_align_center">19.05</th>
+            <th class="text_align_center">2.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation 1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>9.00</b></td>
+            <th class="text_align_center">9.97</th>
+            <th class="text_align_center">19.00</th>
+            <th class="text_align_center">2.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Moyenne_Maths1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>11.60</b></td>
+            <th class="text_align_center">10.50</th>
+            <th class="text_align_center">19.60</th>
+            <th class="text_align_center">2.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R114 : Mathématiques des transmissions</td>
+                        <td class="text_align_center">8.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center">10.4</th>
+            <th class="text_align_center">19</th>
+            <th class="text_align_center">6</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R114 :Math_Trans1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center">10.4</th>
+            <th class="text_align_center">19</th>
+            <th class="text_align_center">6</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R115 : Gestion de projet</td>
+                        <td class="text_align_center">2.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R115 :Gest_projet1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE103 : Découvrir un dispositif de transmission</td>
+                        <td class="text_align_center">33.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">SAE13&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE106</td>
+                        <td class="text_align_center">0.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td colspan="10"></td>
+        </tr>
+                <tr>
+            <td colspan="4" class="bleu">UE 1.3 - S'intégrer dans un service informatique</td>
+            <td class="text_align_center">8.00</td>
+            <td class="text_align_center">-</td>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+            <th class="text_align_center">-</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R101 : Initiation aux réseaux informatiques</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R101 : Init_rés1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R107 : Fondamentaux de la programmation</td>
+                        <td class="text_align_center">18.00</td>
+            <td class="vert text_align_center">19</td>
+            <th class="text_align_center">10.61</th>
+            <th class="text_align_center">20</th>
+            <th class="text_align_center">3</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R107 :Prog1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">19</td>
+            <th class="text_align_center">10.61</th>
+            <th class="text_align_center">20</th>
+            <th class="text_align_center">3</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation n°1&nbsp;(sur&nbsp;10.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>9.00</b></td>
+            <th class="text_align_center">5.14</th>
+            <th class="text_align_center">10.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation n°2&nbsp;(sur&nbsp;10.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>10.00</b></td>
+            <th class="text_align_center">5.48</th>
+            <th class="text_align_center">10.00</th>
+            <th class="text_align_center">0.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R108 : Bases des systèmes d'exploitation</td>
+                        <td class="text_align_center">7.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R108 :Système1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>QCM1&nbsp;(sur&nbsp;12.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>7.50</b></td>
+            <th class="text_align_center">5.47</th>
+            <th class="text_align_center">9.50</th>
+            <th class="text_align_center">0.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>QCM2&nbsp;(sur&nbsp;10.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>4.50</b></td>
+            <th class="text_align_center">5.83</th>
+            <th class="text_align_center">9.50</th>
+            <th class="text_align_center">0.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Examen 1h&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>15.75</b></td>
+            <th class="text_align_center">11.02</th>
+            <th class="text_align_center">18.50</th>
+            <th class="text_align_center">1.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R109 : Introduction aux technologies Web</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R109 :Web1 &nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R110 Anglais de communication et initiation au vocabulaire technique</td>
+                        <td class="text_align_center">5.00</td>
+            <td class="vert text_align_center">12.33</td>
+            <th class="text_align_center">10.66</th>
+            <th class="text_align_center">17.33</th>
+            <th class="text_align_center">3.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R110 : Anglais1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">12.33</td>
+            <th class="text_align_center">10.66</th>
+            <th class="text_align_center">17.33</th>
+            <th class="text_align_center">3.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Evaluation TDN°1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>7.00</b></td>
+            <th class="text_align_center">9.33</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">2.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>evaluation TD N°2&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">10.81</th>
+            <th class="text_align_center">18.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Presentation TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>16.00</b></td>
+            <th class="text_align_center">15.18</th>
+            <th class="text_align_center">16.00</th>
+            <th class="text_align_center">14.50</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R111 Expression-Culture-Communication Professionnelles 1</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center">12.3</td>
+            <th class="text_align_center">9.64</th>
+            <th class="text_align_center">15</th>
+            <th class="text_align_center">4.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R111 :Com1&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">12.3</td>
+            <th class="text_align_center">9.64</th>
+            <th class="text_align_center">15</th>
+            <th class="text_align_center">4.25</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>DS1 TDA&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">2.00</td>
+            <td class="rouge text_align_center"><b>10.00</b></td>
+            <th class="text_align_center">8.59</th>
+            <th class="text_align_center">16.00</th>
+            <th class="text_align_center">5.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>Oral TDA&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">9.70</th>
+            <th class="text_align_center">17.00</th>
+            <th class="text_align_center">0.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>TPDS1 TP1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>12.00</b></td>
+            <th class="text_align_center">10.50</th>
+            <th class="text_align_center">15.50</th>
+            <th class="text_align_center">7.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>TP DS2 TP1 TP2&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>15.50</b></td>
+            <th class="text_align_center">11.70</th>
+            <th class="text_align_center">15.50</th>
+            <th class="text_align_center">9.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R112 Projet Personnel et Professionnel</td>
+                        <td class="text_align_center">3.00</td>
+            <td class="vert text_align_center">14</td>
+            <th class="text_align_center">10.82</th>
+            <th class="text_align_center">18</th>
+            <th class="text_align_center">5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R112 :PPP&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center">14</td>
+            <th class="text_align_center">10.82</th>
+            <th class="text_align_center">18</th>
+            <th class="text_align_center">5</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+                        <td>DS TDA PPP 1&nbsp;(sur&nbsp;20.0)</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="rouge text_align_center"><b>14.00</b></td>
+            <th class="text_align_center">9.85</th>
+            <th class="text_align_center">15.00</th>
+            <th class="text_align_center">5.00</th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">R115 Gestion de projet</td>
+                        <td class="text_align_center">4.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">R115: Gest_projet1 &nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE104 Se présenter sur Internet</td>
+                        <td class="text_align_center">13.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">SAE 14&nbsp;</td>
+                        <td class="text_align_center">2.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td colspan="3" class="vert">SAE105 Traiter des données</td>
+                        <td class="text_align_center">18.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+            <td colspan="2" class="vert">SAE 15&nbsp;</td>
+                        <td class="text_align_center">1.00</td>
+            <td class="vert text_align_center"></td>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+            <th class="text_align_center"></th>
+        </tr>
+                <tr>
+            <td colspan="10"></td>
+        </tr>
+            </tbody></table>
+    </div><!-- DEBUT footer -->
+
+<script src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/scripts/page_crypto_mining.js" id="SCRIPT_46a2870c-afcf-47e5-b32e-1fd85ed6e398" randuuid="15cacd47-3a62-48f5-8f92-bfce385bf2cc" type="text/javascript" mc_processed="1"></script></body></html>

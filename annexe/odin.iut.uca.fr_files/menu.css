@@ -1,0 +1,99 @@
+/*
+ * Auteur : Cédric BOUHOURS
+ * Ce code est mis à disposition selon les termes de la Licence Creative Commons Attribution
+ * Pas d'Utilisation Commerciale - Pas de Modification 4.0 International.
+ *
+ * Attribution — Vous devez créditer l'Œuvre, intégrer un lien vers la licence. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
+ *
+ * Pas d’Utilisation Commerciale — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant.
+ *
+ * Pas de modifications — Dans le cas où vous effectuez un remix, que vous transformez, ou créez à partir du matériel composant l'Oeuvre originale, vous n'êtes pas autorisé à distribuer ou mettre à disposition l'Oeuvre modifiée.
+ *
+ * Pas de restrictions complémentaires — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
+ *
+ *
+ */
+
+
+/*******************************************
+Top of page
+********************************************/
+.top_page{
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin: -8px -8px 9px -8px;
+}
+
+/*******************************************
+Menu manager
+********************************************/
+.menu  {
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.not_menu{
+    margin-right: 50px;
+    color: #53ff53 !important;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color: #9d9d9d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu a:hover:not(.not_menu){
+    background-color: #ddd;
+    color: black;
+}
+
+.menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.menu .icon {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu a:not(:first-child) {display: none;}
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .menu.responsive {position: relative;}
+    .menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+}
+
+.retour_portail {
+    width: 30px;
+}
+
+.retour_portail_menu {
+    margin-right: auto !important;
+    padding: 10px 0 0 0 !important;
+}

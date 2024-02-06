@@ -1,0 +1,83 @@
+/*
+ * Auteur : Cédric BOUHOURS
+ * Ce code est mis à disposition selon les termes de la Licence Creative Commons Attribution
+ * Pas d'Utilisation Commerciale - Pas de Modification 4.0 International.
+ *
+ * Attribution — Vous devez créditer l'Œuvre, intégrer un lien vers la licence. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
+ *
+ * Pas d’Utilisation Commerciale — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant.
+ *
+ * Pas de modifications — Dans le cas où vous effectuez un remix, que vous transformez, ou créez à partir du matériel composant l'Oeuvre originale, vous n'êtes pas autorisé à distribuer ou mettre à disposition l'Oeuvre modifiée.
+ *
+ * Pas de restrictions complémentaires — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
+ *
+ *
+ */
+
+
+/*******************************************
+Gestion menu
+********************************************/
+.image_menu {
+    height: 20px;
+}
+
+.texte_menu {
+    font-size:15px;
+}
+
+.global_menu_a {
+    color: #ff9999 !important;
+}
+/*******************************************
+Relevé
+********************************************/
+.releve {
+    border-collapse: separate;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-spacing: 0;
+    box-sizing: border-box;
+    display: table;
+    border-color: grey;
+}
+
+.releve tbody tr td {
+    padding: 10px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.releve tbody tr th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    background-color: gray;
+}
+
+/***********************************
+Signature
+ ***********************************/
+.signature-pad--body {
+    position: relative;
+    border: 1px solid black;
+    height: 200px;
+}
+
+.signature-pad--body canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;
+}
+
+.signature-pad--footer {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 8px;
+}

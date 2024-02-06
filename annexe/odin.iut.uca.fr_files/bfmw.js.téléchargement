@@ -1,0 +1,497 @@
+/*
+ * Auteur : Cédric BOUHOURS
+ * Ce code est mis à disposition selon les termes de la Licence Creative Commons Attribution
+ * Pas d'Utilisation Commerciale - Pas de Modification 4.0 International.
+ *
+ * Attribution — Vous devez créditer l'Œuvre, intégrer un lien vers la licence. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
+ *
+ * Pas d’Utilisation Commerciale — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant.
+ *
+ * Pas de modifications — Dans le cas où vous effectuez un remix, que vous transformez, ou créez à partir du matériel composant l'Oeuvre originale, vous n'êtes pas autorisé à distribuer ou mettre à disposition l'Oeuvre modifiée.
+ *
+ * Pas de restrictions complémentaires — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
+ *
+ *
+ */
+
+var gestionnaireTimeOut;
+var updater_visible = false;
+//********************************
+//Functions
+//********************************
+function bfmw_jx(url, callback200=null, callback=null, method="POST", params="") {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+    } else {
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xhttp.open(method, url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+            if (callback200 != null) {
+                callback200(xhttp.responseText);
+            }
+        } else if (xhttp.readyState === 4) {
+            if (callback != null) {
+                callback(xhttp.status,xhttp.responseText);
+            }
+        }
+    };
+
+    xhttp.send(params);
+}
+
+function autoLogOut() {
+    if (gestionnaireTimeOut != null) {
+        clearTimeout(gestionnaireTimeOut);
+    }
+    gestionnaireTimeOut = setTimeout(function () {
+        showMessage("info","Inactivité détectée","Vous êtes inactif sur cette page depuis plus de 10 minutes. Vous allez être automatiquement déconnectés dans 2 minutes sauf si vous fermez ce message.");
+        gestionnaireTimeOut = setTimeout(function () {
+            document.location.href = "?p=logout";
+        },120000);
+    }, 600000);
+}
+
+function showResponsiveMenu() {
+    autoLogOut();
+    var x = document.getElementById("GeneralMenu");
+    if (x.className === "menu") {
+        x.className += " responsive";
+    } else {
+        x.className = "menu";
+    }
+}
+
+function showMessage(complement, titre, contenu) {
+    document.getElementById('modal_title').innerHTML = titre.replace(/\\/g, "");
+    document.getElementById('modal_content').innerHTML = "<p>" + contenu.replace(/\\/g, "") + "</p>";
+    switch (complement) {
+        case "success" :
+            document.getElementById('modal_header').style.backgroundColor = "green";
+            break;
+        case "info" :
+            document.getElementById('modal_header').style.backgroundColor = "blue";
+            break;
+        case "warning" :
+            document.getElementById('modal_header').style.backgroundColor = "orange";
+            break;
+        default :
+            document.getElementById('modal_header').style.backgroundColor = "red";
+            break;
+    }
+    document.getElementById('myModal').style.display = "block";
+}
+
+function showMaster() {
+    autoLogOut();
+    document.getElementById("le_master").style.visibility = "visible";
+    document.getElementById("detail").style.visibility = "collapse";
+    document.getElementById("detail").style.display = "none";
+}
+
+function hideUpdater(){
+    var updater = document.getElementById("bfmw_updater_simple");
+    if (updater != null) {
+        updater.classList.add("hide");
+    }
+    updater_visible = false;
+}
+
+function showUpdater(event,field_name,field_value,field_value_where,modifier_id,binding_name,area=false,label=""){
+    hideUpdater();
+    var laboite = document.getElementById("bfmw_updater_simple");
+    if (laboite != null) {
+        laboite.style.top = (event.clientY+(document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+"px";
+        laboite.style.left = (event.clientX+(document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft))+"px";
+        laboite.classList.remove("hide");
+        updater_visible = true;
+        document.getElementById("bfmw_update_field_label").innerText = label;
+        var element = !area?"bfmw_update_field_text":"bfmw_update_field_textarea"
+        document.getElementById(element).name = field_name;
+        document.getElementById(element).dataset.bfmw = field_value_where;
+        document.getElementById(element).dataset.bfmw2 = modifier_id;
+        document.getElementById(element).dataset.bfmw3 = binding_name;
+        document.getElementById(element).select();
+        document.getElementById(element).classList.remove("force_hide");
+        document.getElementById(area?"bfmw_update_field_text":"bfmw_update_field_textarea").classList.add("force_hide");
+        if (!area) {
+            document.getElementById("bfmw_update_field_text").value = field_value;
+        } else {
+            document.getElementById("bfmw_update_field_textarea").innerText = field_value;
+        }
+    }
+    event.stopPropagation();
+}
+
+function active_blur_updater(element) {
+    if (element != null) {
+        element.onblur = function () {
+            var updater = this.dataset.bfmw2;
+            var value = this.value;
+            bind(this.dataset.bfmw3, this.value, this.dataset.bfmw, this, null, function () {
+                document.getElementById(updater).innerText = value;
+            });
+        }
+    }
+    element = document.getElementById("bfmw_update_submit");
+    if (element != null) {
+        hideUpdater();
+    }
+}
+
+function bind(type, valeur, where, obj, objColor, callback, callbackError = null) {
+    autoLogOut();
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+    } else {
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xhttp.open("POST", "index.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    if (obj.type === "checkbox") {
+        if (!obj.checked) {
+            valeur = '0';
+        }
+    }
+
+    if (typeof objColor === 'string') {
+        objColor = document.getElementById(objColor);
+    }
+
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4) {
+            if (xhttp.status === 200) {
+                if (xhttp.responseText === "OK") {
+                    if (objColor != null) {
+                        objColor.style.backgroundColor = '#74DD71';
+                    }
+                    if (callback != null) {
+                        callback();
+                    }
+                } else {
+                    if (objColor != null) {
+                        objColor.style.backgroundColor = 'red';
+                    }
+                    if (callbackError != null) {
+                        callbackError();
+                    }
+                }
+            } else {
+                if (objColor != null) {
+                    objColor.style.backgroundColor = 'red';
+                }
+                if (callbackError != null) {
+                    callbackError();
+                }
+            }
+        }
+    };
+
+    xhttp.send("bind=doing&type=" + type + "&valeur=" + encodeURIComponent(valeur.trim()) + "&where=" + encodeURIComponent(where) + "&tag=" + encodeURIComponent(obj.name));
+
+}
+
+function preparehide(element,affiche) {
+    if (affiche != null) {
+         if (affiche instanceof HTMLCollection) {
+             for (let i = 0; i < affiche.length; i++) {
+                 affiche[i].classList.add("force_hide");
+             }
+        } else {
+             affiche.classList.add("force_hide");
+        }
+
+        element.onclick = function (){
+            if (this.classList.contains("plus")) {
+                this.classList.remove("plus");
+                this.classList.add("moins");
+                if (affiche instanceof HTMLCollection) {
+                    for (let i = 0; i < affiche.length; i++) {
+                        affiche[i].classList.remove("force_hide");
+                    }
+                } else {
+                    affiche.classList.remove("force_hide");
+                }
+            } else {
+                this.classList.add("plus");
+                this.classList.remove("moins");
+                if (affiche instanceof HTMLCollection) {
+                    for (let i = 0; i < affiche.length; i++) {
+                        affiche[i].classList.add("force_hide");
+                    }
+                } else {
+                    affiche.classList.add("force_hide");
+                }
+            }
+        }
+    }
+}
+
+function autohide(element) {
+    element.classList.add("plus");
+    element.classList.add("TreeViewCursor");
+    var affiche = document.getElementById(element.dataset.bfmw);
+    preparehide(element,affiche);
+    if (affiche === null) {
+        affiche = document.getElementsByClassName(element.dataset.bfmw);
+        preparehide(element, affiche);
+    }
+}
+
+function activateTreeView(oList,collapse = true) {
+    if (collapse) {
+        let LesElements = oList.getElementsByTagName("ul");
+        for (let i = 0; i < LesElements.length; i++) {
+            LesElements[i].style.display = "none";
+        }
+    }
+
+    if (oList.addEventListener) {
+        oList.addEventListener("click", toggleBranch, false);
+    }
+    addLinksToBranches(oList);
+}
+
+function toggleBranch(event) {
+    let oBranch, cSubBranches;
+    if (event.target) {
+        oBranch = event.target;
+    } else if (event.srcElement) { // For IE
+        oBranch = event.srcElement;
+    }
+    if (oBranch.tagName === "LI") {
+        oBranch.classList.remove("survol");
+        cSubBranches = oBranch.getElementsByTagName("ul");
+        if (cSubBranches.length > 0) {
+            if (cSubBranches[0].style.display === "block") {
+                cSubBranches[0].style.display = "none";
+                oBranch.classList.add("survol");
+                oBranch.classList.remove("moins");
+                oBranch.classList.add("plus");
+            } else {
+                cSubBranches[0].style.display = "block";
+                oBranch.classList.add("moins");
+                oBranch.classList.remove("plus");
+            }
+        }
+    }
+}
+
+function addLinksToBranches(oList) {
+    let cBranches = oList.getElementsByTagName("li");
+    let i, n, cSubBranches;
+    if (cBranches.length > 0) {
+        for (i=0, n = cBranches.length; i < n; i++) {
+            cSubBranches = cBranches[i].getElementsByTagName("ul");
+            if (cSubBranches.length > 0) {
+                addLinksToBranches(cSubBranches[0]);
+                cBranches[i].classList.add("TreeViewCursor");
+                cBranches[i].classList.add("survol");
+                cBranches[i].classList.add("plus");
+                cSubBranches[0].style.cursor = "auto";
+            }  else {
+                cBranches[i].classList.add("rien");
+            }
+        }
+    }
+}
+
+function activateAutoHider(starteur) {
+    var lesElements = starteur.getElementsByClassName("bfmw_auto_hidder");
+    for (var i = 0; i < lesElements.length; i++) {
+        autohide(lesElements[i]);
+    }
+}
+
+function include(fileName){
+    document.write("<script type='text/javascript' src='"+fileName+"'></script>" );
+}
+
+function refresh(send) {
+    if (send !== "") {
+        window.location.replace("?" + send);
+    } else {
+        window.location.replace("?p=accueil");
+    }
+}
+
+function computeSizeMenuAndMaster(){
+    autoLogOut();
+    var gap = document.getElementById("GeneralMenu").style.marginBottom;
+    var marginMenu = document.getElementById("GeneralMenu").clientHeight + gap;
+    if (document.getElementById("le_master") !== null) {
+        document.getElementById("le_master").style.top = (marginMenu).toString() + "px";
+        document.getElementById("le_master").style.height = "calc(100% - "+(marginMenu).toString()+"px)";
+    }
+
+    var topFilter = document.getElementById("id_div_filter").clientHeight;
+    var lesElements = document.getElementsByClassName("master");
+    for (var i = 0; i < lesElements.length; i++) {
+        lesElements[i].style.height = "calc(100% - "+(topFilter).toString()+"px)"
+        //lesElements[i].style.top = (marginMenu + topFilter).toString() + "px";
+    }
+
+   /* document.getElementById("id_margin_top").style.marginTop = (marginMenu).toString() + "px";
+    var lesElements = document.getElementsByClassName("master");
+    for (var i = 0; i < lesElements.length; i++) {
+        lesElements[i].style.height = "calc(100% - "+(marginMenu + topFilter).toString()+"px)"
+        lesElements[i].style.top = (marginMenu + topFilter).toString() + "px";
+    }
+    if (document.getElementById("detail") != null) {
+        document.getElementById("detail").style.top = (marginMenu - gap).toString() + "px";
+        document.getElementById("detail").style.height = "calc(100% - " + (marginMenu - gap).toString() + "px)";
+    }*/
+}
+
+function toDoOnLoad(f) {
+    functionsToLoadOnLoad[functionsToLoadOnLoad.length] = f;
+}
+
+//********************************
+//Inline
+//********************************
+var functionsToLoadOnLoad = [];
+
+window.onload = function () {
+    for (var i = 0; i < functionsToLoadOnLoad.length; i++) {
+        try {
+            functionsToLoadOnLoad[i]();
+        } catch (e) {
+
+        }
+    }
+};
+
+toDoOnLoad(function () {
+    var lesElements = document.getElementsByClassName("bfmw_refresh_dist");
+    for (var i = 0; i < lesElements.length; i++) {
+        refresh(lesElements[i].dataset.bfmw);
+    }
+});
+
+toDoOnLoad(function () {
+    var lesElements = document.getElementsByClassName("show_master");
+    for (var i = 0; i < lesElements.length; i++) {
+        lesElements[i].onclick = function () {
+            showMaster();
+        };
+    }
+});
+
+toDoOnLoad(function () {
+    var modal = document.getElementById('myModal');
+    var updater = document.getElementById('bfmw_update_field_text');
+    var updater_2 = document.getElementById('bfmw_update_field_textarea');
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+        autoLogOut();
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            autoLogOut();
+            modal.style.display = "none";
+        }
+        if (updater_visible && event.target !== updater && event.target !== updater_2) {
+            hideUpdater();
+            event.stopPropagation();
+        }
+    };
+});
+
+toDoOnLoad(function () {
+    var lesElements = document.getElementsByClassName("show_message");
+    for (var i = 0; i < lesElements.length; i++) {
+        showMessage(lesElements[i].dataset.complement, lesElements[i].dataset.titre, lesElements[i].dataset.message);
+    }
+});
+
+toDoOnLoad(function () {
+    computeSizeMenuAndMaster();
+});
+
+toDoOnLoad(function () {
+    if (document.getElementById("id_margin_top") !== null) {
+        window.onresize = function () {
+            computeSizeMenuAndMaster();
+        }
+    }
+});
+
+toDoOnLoad(function () {
+    try {
+        if (document.getElementById("tooold").dataset.bfmw === "tooold") {
+            return 0;
+        }
+    } catch (e) {}
+    document.location.replace("../bfmw/tooold.php");
+});
+
+toDoOnLoad(function () {
+    var lesElements = document.getElementsByClassName("TreeView");
+    for (var i = 0; i < lesElements.length; i++) {
+        activateTreeView(lesElements[i]);
+    }
+});
+
+toDoOnLoad(function () {
+    activateAutoHider(document);
+});
+
+toDoOnLoad(function () {
+    var element = document.getElementById("bfmw_update_field_text");
+    active_blur_updater(element);
+    element = document.getElementById("bfmw_update_field_textarea");
+    active_blur_updater(element);
+});
+
+toDoOnLoad(function () {
+    document.onscroll = function(){
+        autoLogOut();
+    };
+});
+
+toDoOnLoad(function () {
+    let lesElements = document.getElementsByClassName("bfmw_submit_ajax");
+    for (let i = 0; i < lesElements.length; i++) {
+        lesElements[i].onsubmit = function() {
+            let formulaire = lesElements[i];
+            let donnees = [];
+            for (let j=0;j<formulaire.length;j++){
+                donnees.push(formulaire[j].name +"="+ formulaire[j].value);
+            }
+            bfmw_jx(formulaire.action,function(reponse){
+                if (reponse !== "-1") {
+                    formulaire.reset();
+                    let ok = document.getElementById(formulaire.dataset.bfmw);
+                    let ko = document.getElementById(formulaire.dataset.bfmw2);
+                    if (ok != null) {
+                        ok.classList.remove("force_hide");
+                    }
+                    if (ko != null) {
+                        ko.classList.add("force_hide");
+                    }
+                } else {
+                    let ok = document.getElementById(formulaire.dataset.bfmw);
+                    let ko = document.getElementById(formulaire.dataset.bfmw2);
+                    if (ok != null) {
+                        ok.classList.add("force_hide");
+                    }
+                    if (ko != null) {
+                        ko.classList.remove("force_hide");
+                    }
+                }
+            },null,formulaire.method,donnees.join("&"));
+            return false;
+        }
+    }
+});

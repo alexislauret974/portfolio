@@ -1,0 +1,334 @@
+body {
+  background-color: #00959d;
+  font-family: sans-serif;
+  font-size: 18px;
+
+
+}
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic; 
+  font-size: 17px;
+}
+
+
+main {
+  background-color: #fffbf4;
+  width: 80%;
+  margin: 0 auto; 
+  margin-bottom: 15px ;
+  overflow: hidden;
+  border-radius: 10px;
+  
+  ;
+}
+
+/*BAR MENU HORIZONTALE*/
+
+header{
+  margin-bottom: 10px;
+  position: sticky;
+  top:5px;
+}
+.Menu {
+  background-color: #04427b;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.Menu a {
+  float: left;
+  color: #fffbf4;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+  font-size: 22px;
+  margin: 10px 0; 
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.Menu a:hover {
+background-color: #ddd;
+color: black;
+border-radius: 10px;
+}
+
+.Menu a.active {
+  background-color: black;
+  color: #ddd;
+  border-radius: 10px;
+}
+
+.Menu a.name {
+  background-color: #bd5a0e;
+  color: white;
+  border-radius: 10px;
+}
+
+/*A PROPOS DE MOI*/
+.moi h1{
+  text-align: center;
+  font-size: 40px;
+  }
+  
+.moi h2 {
+  margin: 30px;
+  }
+  
+.moi p {
+  margin: 30px;
+  
+  }
+
+.Photo {
+display: flex;
+align-items: center;
+margin: 80px;
+}
+.statut {
+margin-left: 100px;
+
+}
+.statut p {
+font-size: 30px;
+}
+.Photo img{
+width: 30%;
+border-radius: 50%;
+}
+
+
+/*Mes FORMATIONS */
+
+.formation h1 {
+  margin-left: 30px; 
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+.formation h2 {
+  margin-left: 60px; 
+  margin-bottom: 15px;
+}
+
+.formation p {
+  margin-left: 90px;
+
+}
+.formation li{
+  margin-left: 90px;
+  margin-bottom: 10px;
+  list-style-type: circle;
+}
+.formationIm {
+  margin-top: 30px;
+  display: grid;
+  place-items: center;
+}
+.formationIm img{
+
+  width: 450px; 
+  height: auto; 
+  border: 60px
+}
+
+.formationIm2 {
+  margin-top: 30px;
+  display: grid;
+  place-items: center;
+}
+.formationIm2 img{
+
+  width: 600px; 
+  height: auto; 
+  border: 60px
+}
+
+.but { 
+  margin-bottom: 60px;
+}
+
+
+.but li { 
+  margin-bottom: 10px;
+}
+/*MON PARCOURS*/ 
+
+.Parcours h1{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 60px;
+
+}
+
+.Parcours h2 {
+  text-align: center;
+}
+
+.Parcours h3 {
+  margin-left: 45px;
+}
+
+.Parcours p {
+  margin-left: 45px;
+}
+.Parcours li {
+  margin-bottom: 10px;
+  list-style-type: circle;
+  margin-bottom: 30px;
+}
+.parcours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.parcours img {
+  margin: 30px;
+  margin-top: 0px;
+  width: 300px; 
+  border: 60px
+}
+
+/*Mes compétences*/
+
+.compétences h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.compétences h2 {
+  margin-left: 15px;
+  text-align: center;
+
+}
+
+.compétences h3 {
+  margin-left: 20px;
+}
+
+.compétences ul {
+  margin: 50px;
+  margin-top: 15px;
+}
+
+.ip p {
+  margin-bottom: 30px;
+}
+
+.ip li {
+  font-weight: bold;
+  font-style: italic; 
+}
+.ip {
+  margin-bottom: 40px;
+}
+
+
+.telecom p {
+  margin-bottom: 30px;
+}
+
+.telecom li {
+  font-weight: bold;
+  font-style: italic; 
+}
+
+.quality h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.quality li {
+  margin-bottom: 50px;
+}
+.compet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.compet img {
+  margin: 30px;
+  margin-top: 0px;
+  width: 500px; 
+  border: 60px
+}
+
+/*PROJETS*/ 
+
+.Projets h2{
+  text-align: center;
+}
+
+object {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.Projets article {
+  margin-left: 30px;
+}
+
+.projus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projus img {
+  margin: 30px;
+  margin-top: 0px;
+  width: 450px; 
+  border: 60px
+}
+/*CV*/ 
+
+.cava h1 {
+  text-align: center;
+
+}
+
+.cava a {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+.cava img {
+  width: 50%;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Divers*/
+.divers {
+  margin-left:30px
+}
+.comics img{
+  width: 180px; 
+  height: auto; 
+  border: 60px;
+  margin: 50px;
+}
+
+/*Contact*/ 
+
+.blabla p {
+  margin-left: 20px;
+  font-size: 1cm;
+}
+
+

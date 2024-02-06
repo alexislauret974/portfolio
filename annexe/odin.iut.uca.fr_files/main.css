@@ -1,0 +1,170 @@
+/*
+ * Auteur : Cédric BOUHOURS
+ * Ce code est mis à disposition selon les termes de la Licence Creative Commons Attribution
+ * Pas d'Utilisation Commerciale - Pas de Modification 4.0 International.
+ *
+ * Attribution — Vous devez créditer l'Œuvre, intégrer un lien vers la licence. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
+ *
+ * Pas d’Utilisation Commerciale — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant.
+ *
+ * Pas de modifications — Dans le cas où vous effectuez un remix, que vous transformez, ou créez à partir du matériel composant l'Oeuvre originale, vous n'êtes pas autorisé à distribuer ou mettre à disposition l'Oeuvre modifiée.
+ *
+ * Pas de restrictions complémentaires — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
+ *
+ *
+ */
+
+
+/*******************************************
+Main document
+********************************************/
+.main {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text]:not(.bfmw_no_style), input[type=number]:not(.bfmw_no_style), input[type=time]:not(.bfmw_no_style),
+input[type=date]:not(.bfmw_no_style), input[type=email]:not(.bfmw_no_style), input[type=password]:not(.bfmw_no_style), select:not(.bfmw_no_style),
+textarea:not(.bfmw_no_style) {
+    width: 100%;
+    padding: 2px 2px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.box:not(.bfmw_no_style) {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+input[type=file]:not(.bfmw_no_style) {
+    width: 100%;
+    padding: 2px 2px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+input[type=checkbox]:not(.bfmw_no_style) {
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    padding: 10px;
+}
+
+select:not(.bfmw_no_style) {
+    font-size: large;
+}
+
+.box:not(.bfmw_no_style) a.block:not(.bfmw_no_style){
+    width: 100%;
+    padding: 5px 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+}
+
+input[type=submit]:not(.bfmw_no_style) {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover:not(.bfmw_no_style) {
+    opacity: 0.8;
+}
+
+input[type=submit][disabled]:not(.bfmw_no_style) {
+    background-color: grey;
+    cursor: inherit;
+}
+input[type=submit][disabled]:hover:not(.bfmw_no_style) {
+    opacity: 1;
+}
+
+/*******************************************
+Setup config
+********************************************/
+#logo{
+    position: absolute;
+    max-width: 7em;
+    top: 1em;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+body #setup-config{
+    margin: 140px auto 25px;
+    padding: 20px 20px 10px;
+    max-width: 720px;
+}
+
+#setup-config a[role=button]{
+    background-color: #4CAF50;
+    padding: 10px;
+    display: block;
+}
+
+#setup-config button{
+    background-color: #4CAF50;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#setup-config button a{
+    text-decoration: none;
+    color: white;
+}
+
+#setup-config a[role=button]:hover, #setup-config button:hover {
+    opacity: 0.8 !important;
+    color: #fff;
+}
+
+/*******************************************
+Boutons applicatifs
+********************************************/
+.button {
+    font-family: sans-serif;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: #20bb20;
+}
